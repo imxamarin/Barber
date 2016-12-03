@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3" translatesAutoresizingMaskIntoConstraints="NO" image="1242X2208.png" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1242X2208.png" width="1242" height="2208"/>
+        <image name="375X667.png" width="375" height="667"/>
+        <image name="750X1334.png" width="750" height="1334"/>
+        <image name="appointment.png" width="10" height="10"/>
+        <image name="back.png" width="7" height="14"/>
+        <image name="booking_image.png" width="320" height="181"/>
+        <image name="cancel.png" width="18" height="18"/>
+        <image name="check_icon.png" width="24" height="21"/>
+        <image name="cut.png" width="15" height="18"/>
+        <image name="cut_line_up.png" width="12" height="19"/>
+        <image name="email_icon.png" width="18" height="13"/>
+        <image name="etc1.png" width="19" height="19"/>
+        <image name="etc2.png" width="18" height="18"/>
+        <image name="etc3.png" width="18" height="18"/>
+        <image name="gallery.png" width="11" height="8"/>
+        <image name="gallery_iamge.png" width="320" height="163"/>
+        <image name="group1.png" width="320" height="568"/>
+        <image name="hot_tower_shave.png" width="13" height="17"/>
+        <image name="icon_phone.png" width="17" height="17"/>
+        <image name="location.png" width="11" height="11"/>
+        <image name="logo-small.png" width="60" height="43.6666679"/>
+        <image name="logo.png" width="117" height="84"/>
+        <image name="logo_small.png" width="47" height="34"/>
+        <image name="navigation.png" width="42" height="42"/>
+        <image name="password_icon.png" width="14" height="20"/>
+        <image name="pic1.png" width="97" height="90"/>
+        <image name="pic2.png" width="97" height="90"/>
+        <image name="pic3.png" width="97" height="90"/>
+        <image name="pic4.png" width="97" height="90"/>
+        <image name="pic5.png" width="97" height="90"/>
+        <image name="pic6.png" width="97" height="90"/>
+        <image name="pic7.png" width="97" height="90"/>
+        <image name="pic8.png" width="97" height="90"/>
+        <image name="pic9.png" width="97" height="90"/>
+        <image name="services.png" width="12" height="11"/>
+        <image name="smartphone_icon.png" width="13" height="20"/>
+        <image name="splash.png" width="320" height="568"/>
+        <image name="toggle.png" width="20" height="12"/>
+        <image name="user_icon.png" width="18" height="19"/>
+    </resources>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina47"/>
+    </simulatedMetricsContainer>
+</document>

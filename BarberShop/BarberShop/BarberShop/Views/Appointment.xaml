@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BarberShop.Appointment" Title="APPOINTMENTS" BackgroundImage="group1.png">
+	<ContentPage.Content>
+		<!--<StackLayout>
+      <Image Aspect="AspectFill" Source="booking_image" />
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Image Source="logo" />
+        <Label HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Large" Text="No Appointment Booked" TextColor="#C1C1C1" />
+      </StackLayout>
+      <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" >
+        <StackLayout Orientation="Horizontal" Padding="0" Spacing="1" >
+          <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical"  Padding="0" Spacing="0">
+            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" Text="BOOK NOW" StyleId ="1" TextColor="White" Clicked = "Handle_Clicked" />
+            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" StyleId ="2" Text="GALLARY" Clicked = "Handle_Clicker" TextColor="White" />
+          </StackLayout>
+          <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical" HeightRequest="45"  Padding="0" Spacing="0">
+            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" Text="SERVICES" StyleId ="3" Clicked = "Handle_Clickerd" TextColor="White" />
+            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" StyleId ="4" Text="LOCATION" Clicked = "Handle_Clickerdr" TextColor="White" />
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>-->
+		<StackLayout Padding="0" Spacing="10">
+			<StackLayout.Children>
+				<StackLayout VerticalOptions="StartAndExpand">
+					<Image Aspect="AspectFill" Source="booking_image" />
+				</StackLayout>
+				<StackLayout VerticalOptions="CenterAndExpand">
+					<Image Source="logo" />
+					<Label HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Large" Text="No Appointment Booked" TextColor="#C1C1C1" />
+				</StackLayout>
+				<StackLayout x:Name="ButtonSet" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Padding="0" Spacing="0">
+					<StackLayout.Children>
+						<StackLayout x:Name="AlphaSet" Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="-3" Spacing="0">
+							<StackLayout.Children>
+								<Button Margin="0" IsEnabled="{Binding ButtonState}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" Text="BOOK NOW" TextColor="White" Command="{Binding SelectCalender}">
+								</Button>
+								<Button Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" Text="GALLERY" TextColor="White" Command="{Binding SelectGallery}">
+								</Button>
+							</StackLayout.Children>
+						</StackLayout>
+						<StackLayout x:Name="BetaSet" Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="-3" Spacing="0">
+							<StackLayout.Children>
+								<Button Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" Text="SERVICES" TextColor="White" Command="{Binding SelectServices}">
+								</Button>
+								<Button Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" Text="LOCATION" TextColor="White" Command="{Binding SelectMap}">
+								</Button>
+							</StackLayout.Children>
+						</StackLayout>
+					</StackLayout.Children>
+				</StackLayout>
+			</StackLayout.Children>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

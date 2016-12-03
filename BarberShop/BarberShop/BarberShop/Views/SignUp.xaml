@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BarberShop;assembly=BarberShop" x:Class="BarberShop.SignUp" Title="SIGN UP" BackgroundImage="group1.png">
+	<ContentPage.Content>
+		<StackLayout BackgroundColor="Transparent" Padding="20, 80, 20, 50" Orientation="Vertical" Spacing="20">
+			<local:MyEntry x:Name="EmailData" local:MailValidation.AttachBehavior="true" x:FieldModifier="public" Placeholder="Email" Keyboard="Email" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White"
+				TextColor="White" LeftImage="email_icon" Text="{Binding iEmail}" />
+			<local:MyEntry x:Name="confirmPassword" x:FieldModifier="public" Placeholder="PASSWORD" Keyboard="Text" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" IsPassword="true" HorizontalTextAlignment="Center" PlaceholderColor="White"
+				TextColor="White" LeftImage="password_icon" Text="{Binding iPassword}" />
+			<local:MyEntry x:Name="NameData" x:FieldModifier="public" Placeholder=" First Name" Keyboard="Text" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White" TextColor="White"
+				LeftImage="user_icon" Text="{Binding iFirstName}" />
+			<local:MyEntry x:Name="NameSData" x:FieldModifier="public" Placeholder=" Last Name" Keyboard="Text" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White" TextColor="White"
+				LeftImage="user_icon" Text="{Binding iLastName}" />
+			<local:MyEntry x:Name="PhoneNumberData" x:FieldModifier="public" Placeholder="Mobile Phone" Keyboard="Numeric" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White" TextColor="White"
+				LeftImage="smartphone_icon" Text="{Binding iMobileNumber}" />
+			<ActivityIndicator IsVisible="{Binding IndicatorStatus}" IsRunning="{Binding IndicatorStatus}" Color="Black" />
+			<local:CmButton x:Name="SignUpBtnData" x:FieldModifier="public" Text="SIGN UP" BackgroundColor="Black" TextColor="White" BorderRadius="20" BorderColor="Black" BorderWidth="2" WhiteBg="false" Command="{Binding RegCmd}"
+				IsEnabled="{Binding ButtonStatus}" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

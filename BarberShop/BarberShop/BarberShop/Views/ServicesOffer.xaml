@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BarberShop;assembly=BarberShop" Title="SERVICES" x:Class="BarberShop.ServicesOffer">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Refresh" Command="{Binding ToolbarItemCommand}">
+		</ToolbarItem>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout>
+			<ActivityIndicator Color="Black" IsRunning="{Binding AcIns}" IsVisible="{Binding AcIns}" IsEnabled="{Binding AcIns}" />
+			<ListView RowHeight="80" ItemsSource="{Binding ListBar}" ItemSelected="Handle_ItemSelected" IsVisible="{Binding LvShow}">
+				<ListView.Header>
+				</ListView.Header>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal" Spacing="20" Padding="20,5,20,5">
+								<local:CmButton Image="{Binding Logo}" BackgroundColor="Black" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="Black" TextColor="White" BorderWidth="1" BorderRadius="33" HeightRequest="65" MinimumHeightRequest="65"
+									WidthRequest="65" MinimumWidthRequest="65" alphaCircle="true">
+								</local:CmButton>
+								<Label Text="{Binding Treatments}" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="Medium">
+								</Label>
+								<Label Text="{Binding Dollar}" TextColor="#E25D33" VerticalOptions="Center" FontSize="Medium" HorizontalOptions="End">
+								</Label>
+								<Label Text="{Binding Price}" TextColor="#E25D33" FontSize="Medium" VerticalOptions="Center">
+								</Label>
+								<StackLayout Padding="0" Orientation="Horizontal">
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<Label IsVisible="{Binding Defacto}" Text="{Binding ShowStatus}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

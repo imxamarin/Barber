@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:BarberShop;assembly=BarberShop" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BarberShop.Confirmation" BackgroundImage="group1.png">
+	<ContentPage.Content>
+		<StackLayout Padding="10,200,10,10" Orientation="Vertical">
+			<local:CmButton alphaCircle="true" WidthRequest="65" HeightRequest="65" BorderRadius="33" MinimumHeightRequest="65" MinimumWidthRequest="65" Image="check_icon.png" BackgroundColor="#E25D33" HorizontalOptions="Center" TextColor="White" />
+			<Label FontSize="Medium" Text="{Binding Confirmate}" TextColor="#D95B33" HorizontalOptions="Center" BackgroundColor="Transparent" />
+			<Label FontSize="Large" Text="{Binding AppointaCon}" TextColor="Black" HorizontalOptions="Center" BackgroundColor="Transparent" />
+			<local:CmButton betaCircle="true" Text="OK" TextColor="White" WidthRequest="65" HeightRequest="65" BorderRadius="33" MinimumHeightRequest="65" MinimumWidthRequest="65" BackgroundColor="Black" HorizontalOptions="Center"
+				Command="{Binding ClickConn}" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

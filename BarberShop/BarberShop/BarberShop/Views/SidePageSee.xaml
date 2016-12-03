@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" Title="BarberShop" xmlns:local="clr-namespace:BarberShop;assembly=BarberShop" x:Class="BarberShop.SidePageSee" Padding="0,40,0,0" Icon="toggle.png" BackgroundColor="White">
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView x:Name="OffersListView" RowHeight="50" ItemsSource="{Binding SideBar}">
+				<ListView.Header>
+					<StackLayout>
+						<StackLayout Padding="0, 50, 0, 30">
+							<Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Source="logo.png" />
+						</StackLayout>
+						<StackLayout Padding="0,0,0,5">
+							<local:CmButton Text="{Binding UserName}" TextColor="Black" BackgroundColor="White" UserProfile="true" Clicked="Handler_Clicked" />
+						</StackLayout>
+					</StackLayout>
+				</ListView.Header>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal" Spacing="10" Padding="15,0,15,0" BackgroundColor="#E25D33">
+								<Image Source="{Binding log}" HeightRequest="20" WidthRequest="20">
+								</Image>
+								<Label x:Name="Omega" Text="{Binding Tile}" TextColor="White" VerticalOptions="Center">
+								</Label>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+				<ListView.Footer>
+					<StackLayout HorizontalOptions="FillAndExpand">
+						<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+							<Button BackgroundColor="#E25D32" Text="LOGOUT" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" TextColor="White" IsEnabled="true" Clicked="Handle_Clicked" />
+						</StackLayout>
+					</StackLayout>
+				</ListView.Footer>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

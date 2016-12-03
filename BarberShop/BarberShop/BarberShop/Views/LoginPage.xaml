@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BarberShop;assembly=BarberShop" xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms" BackgroundImage="group1.png" x:Class="BarberShop.LoginPage">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" Padding="20,70,20,55" VerticalOptions="Center" Spacing="15">
+			<Image Source="logo.png" Aspect="AspectFit" />
+			<local:MyEntry x:Name="UsernameData" x:FieldModifier="public" Placeholder="EMAIL" Keyboard="Email" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White" TextColor="White"
+				LeftImage="user_icon" Text="{Binding iEmail}" />
+			<local:MyEntry x:Name="PasswordData" x:FieldModifier="public" Placeholder="PASSWORD" Keyboard="Default" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" IsPassword="true" HorizontalTextAlignment="Center" PlaceholderColor="White"
+				TextColor="White" LeftImage="password_icon" Text="{Binding iPassword}" />
+			<local:CmButton x:Name="LoginBtn" x:FieldModifier="public" Text="LOGIN" BackgroundColor="Black" TextColor="White" BorderRadius="20" BorderColor="Black" BorderWidth="2" FontSize="Large" WhiteBg="false"
+				Command="{Binding LoginCmd}" IsEnabled="{Binding ButtonStatus}" />
+			<ActivityIndicator IsVisible="{Binding IndicatorStatus}" IsRunning="{Binding IndicatorStatus}" Color="Black" />
+			<StackLayout Spacing="0" Padding="0">
+				<local:CmButton x:Name="ForgetPasswdBtn" x:FieldModifier="public" Text="FORGET PASSWORD?" TextColor="{Binding BtnColor}" BorderColor="Transparent" BorderRadius="0" BorderWidth="0" FontSize="Medium" btnType="true" Command="{Binding ForgetPassCmd}"
+					IsEnabled="{Binding ButtonStatus}" />
+				<BoxView HeightRequest="1" WidthRequest="200" HorizontalOptions="Center" BackgroundColor="Black" Margin="0,0,-15,0" />
+			</StackLayout>
+			<!--	<Button Text="Facebook Login" Command="{Binding Facebook}" />-->
+			<local:CmButton x:Name="SignUpBtn" x:FieldModifier="public" Text="SIGN UP" BackgroundColor="Transparent" TextColor="Black" BorderRadius="20" BorderColor="Black" BorderWidth="2" WhiteBg="true" Command="{Binding RegCmd}"
+				IsEnabled="{Binding ButtonStatus}" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

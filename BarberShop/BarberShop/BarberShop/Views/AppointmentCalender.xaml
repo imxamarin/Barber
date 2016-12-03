@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BarberShop;assembly=BarberShop" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" x:Class="BarberShop.AppointmentCalender">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+				<StackLayout>
+					<syncfusion:SfCalendar x:Name="CalenderSync" ViewMode="MonthView" SelectionMode="SingleSelection" MaxDate="{Binding MaximumDate}" MinDate="{Binding MinimumDate}" SelectedDate="{Binding MinimumDate}">
+					</syncfusion:SfCalendar>
+				</StackLayout>
+				<StackLayout>
+					<Label HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#F1F1F1" HorizontalTextAlignment="Center" Text="List of Available Times for:" VerticalTextAlignment="Center" />
+				</StackLayout>
+				<StackLayout BackgroundColor="Transparent" Orientation="Horizontal" Padding="10,1,10,5" Spacing="10">
+					<local:CmButton WidthRequest="65" HeightRequest="65" BackgroundColor="Black" BorderRadius="33" Image="etc1.png" MinimumHeightRequest="65" MinimumWidthRequest="65" alphaCircle="true" Command="{Binding AppointmentConfirm}" />
+					<Label VerticalOptions="CenterAndExpand" Text="CUT" TextColor="#7F7F7F" />
+					<Label VerticalOptions="CenterAndExpand" Text="(45 mins)" TextColor="#7F7F7F" />
+					<StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" Padding="0">
+						<Label VerticalOptions="CenterAndExpand" Text="$" TextColor="#E25D33" />
+						<Label VerticalOptions="CenterAndExpand" Text="22" TextColor="#E25D33" />
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Padding="2,1,5,1">
+					<local:CmButton x:Name="AlphaBtn" ButtonHasSelected="true" WidthRequest="{Binding TimeButtonWidth}" HeightRequest="45" VerticalOptions="CenterAndExpand" IsEnabled="true" BackgroundColor="#F5F4F4" BorderRadius="20" Text="{Binding AlphaBtnTime}" />
+					<local:CmButton x:Name="BetaBtn" ButtonHasSelected="true" WidthRequest="{Binding TimeButtonWidth}" HeightRequest="45" VerticalOptions="CenterAndExpand" BackgroundColor="#F5F4F4" BorderRadius="20" Text="{Binding BetaBtnTime}" />
+					<local:CmButton x:Name="GammaBtn" ButtonHasNotSelected="true" WidthRequest="{Binding TimeButtonWidth}" HeightRequest="45" VerticalOptions="CenterAndExpand" BackgroundColor="Black" BorderRadius="20" Text="{Binding DeltaBtnTime}" />
+				</StackLayout>
+				<StackLayout Padding="0" Margin="10" Spacing="0">
+					<local:CmButton Command="{Binding AppointmentConfirm}" WidthRequest="{Binding BookButtonWidth}" SaffaronBg="true" HeightRequest="45" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" BackgroundColor="#E25D33" BorderRadius="20" Text="BOOK NOW" TextColor="White" />
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

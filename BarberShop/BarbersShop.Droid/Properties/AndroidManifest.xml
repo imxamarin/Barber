@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="in.trigma.barbershop">
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="24" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="in.trigma.BarberApp.permission.C2D_MESSAGE" />
+	<uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES" />
+	<permission android:name="in.trigma.BarberApp.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<application android:label="safeprojectname" android:theme="@drawable/ic_launcher">
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBVLJRH9mQ718yH3feqsUKpMb6q7A4Xxrg" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+				<category android:name="in.trigma.BarberApp" />
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>

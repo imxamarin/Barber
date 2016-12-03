@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BarberShop.UserProfile" Title="USER PROFILE" xmlns:local="clr-namespace:BarberShop;assembly=BarberShop" BackgroundImage="group1.png">
+<ContentPage.ToolbarItems>
+      <ToolbarItem  Text="Cancel" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+	<ContentPage.Content>
+		<RelativeLayout>
+			<StackLayout BackgroundColor="Transparent" Padding="20" Orientation="Vertical" Spacing="20" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,&#xA;						Factor=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;						Property=Height,&#xA;						Factor=0.1}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,&#xA;						&#xA;						Factor=1}">
+				<local:MyEntry x:Name="EMAILData" x:FieldModifier="public" Placeholder="{Binding Email}" Keyboard="Text" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White" TextColor="White"
+					LeftImage="user_icon" IsEnabled="false" />
+				<local:MyEntry x:Name="NameData" x:FieldModifier="public" Placeholder="{Binding FirstName}" Keyboard="Text" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White" TextColor="White"
+					LeftImage="user_icon" Text="{Binding FirstName}" />
+				<local:MyEntry x:Name="NameSData" x:FieldModifier="public" Placeholder="{Binding LastName}" Keyboard="Text" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White" TextColor="White"
+					LeftImage="user_icon" Text="{Binding LastName}" />
+				<local:MyEntry x:Name="PhoneNumberData" x:FieldModifier="public" Keyboard="Text"  Placeholder="{Binding MobileNumber}" HorizontalOptions="FillAndExpand" HeightRequest="45" Opacity="0.30" HorizontalTextAlignment="Center" PlaceholderColor="White" TextColor="White"
+					LeftImage="smartphone_icon" Text="{Binding MobileNumber}" />
+			</StackLayout>
+			<StackLayout BackgroundColor="Transparent" Padding="20" Orientation="Vertical" Spacing="20" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,&#xA;						Factor=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;						Property=Height,&#xA;						Factor=0.7}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,&#xA;						Factor=1}">
+				<ActivityIndicator IsVisible="{Binding PBVisibility}" IsRunning="{Binding PBRunning}" Color="Black" />
+				<local:CmButton x:Name="SignUpBtnData" x:FieldModifier="public" Text="UPDATE" BackgroundColor="Black" TextColor="White" BorderRadius="20" BorderColor="Black" BorderWidth="2" WhiteBg="false" Command="{Binding Update}"
+					IsEnabled="{Binding BtnVisibility}" />
+			</StackLayout>
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

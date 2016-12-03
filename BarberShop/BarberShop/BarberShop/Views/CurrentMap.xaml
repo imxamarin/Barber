@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:local="clr-namespace:BarberShop;assembly=BarberShop" Title="LOCATION" x:Class="BarberShop.CurrentMap">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+			<StackLayout.Children>
+				<maps:Map x:Name="MyMap" HeightRequest="100" WidthRequest="960" IsShowingUser="true" MapType="Hybrid" />
+				<ActivityIndicator IsEnabled="{Binding ACI}" IsVisible="{Binding ACI}" IsRunning="{Binding ACI}" />
+				<StackLayout BackgroundColor="White" VerticalOptions="End" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Spacing="0" Padding="0,0,-25,0">
+					<StackLayout.Children>
+						<StackLayout Orientation="Vertical" Margin="0" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Padding="0">
+							<StackLayout.Children>
+								<Label HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" FontSize="Large" HorizontalTextAlignment="Center" Text="THE BUSINESS CENTER &#xA;61 WELLFIELD ROAD&#xA; ROATH CARDIFF" TextColor="#E25D33" />
+								<BoxView Margin="0, 15, 0, 0" WidthRequest="200" HeightRequest="1" HorizontalOptions="Center" BackgroundColor="#CCCCCC" />
+								<Button Command="{Binding GetNumber}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" Image="icon_phone.png" Text="MobileNumber" TextColor="#768C93" IsEnabled="{Binding HaltBtn}" />
+							</StackLayout.Children>
+						</StackLayout>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0">
+							<Button Command="{Binding GetMyLocation}" WidthRequest="100" VerticalOptions="FillAndExpand" BackgroundColor="#E25D33" BorderRadius="0" Image="navigation.png" IsEnabled="{Binding HaltBtn}" />
+						</StackLayout>
+					</StackLayout.Children>
+				</StackLayout>
+			</StackLayout.Children>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
